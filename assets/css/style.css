@@ -4,6 +4,17 @@
     color: #e90b0b;
     margin-bottom: 1rem;
     text-align: center;
+    position: relative;
+    animation: moveLefttoRight 15s linear infinite;
+}
+
+@keyframes moveLefttoRight {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
 }
 
 
