@@ -1,3 +1,5 @@
+
+
 (function ($) {
     "use strict";
 
@@ -92,5 +94,44 @@
         ],
     });
     
+    
 })(jQuery);
+
+
+function validateForm() {
+    console.log("Validation function is running...");
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let message = document.getElementById("message").value.trim();
+
+    // Name Validation: Only letters and spaces, minimum 2 characters
+    let nameRegex = /^[A-Za-z\s]{2,50}$/;
+    if (!nameRegex.test(name)) {
+        alert("Please enter a valid name (letters and spaces only).");
+        return false;
+    }
+
+    // ** Improved Email Validation Regex**
+    let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address.");
+        console.log("Invalid email:", email); // Debugging log
+        return false;
+    } else {
+        console.log("Valid email entered:", email); // Debugging log
+    }
+
+    // Message Validation: At least 10 characters, no gibberish
+    if (message.length < 10 || !/[a-zA-Z]/.test(message)) {
+        alert("Message should be meaningful and at least 10 characters long.");
+        return false;
+    }
+
+    console.log("Validation passed!"); 
+    return true; 
+}
+
+
+
 
