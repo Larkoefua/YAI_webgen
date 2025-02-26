@@ -104,7 +104,7 @@
 }
 
 .bg-hero {
-    background: url(../img/Landing\ page1.png) top right no-repeat;
+    background: url(../img/Landing\ page1.webp) top right no-repeat;
     background-size: cover;
 }
 
@@ -222,7 +222,7 @@
 } */
 
 .bg-testimonial {
-    background: url(../img/bg.png) top center no-repeat;
+    background: url(../img/bg.webp) top center no-repeat;
     background-size: cover;
 }
 

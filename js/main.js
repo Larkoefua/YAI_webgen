@@ -12,7 +12,7 @@
         }
     });
     
-    // Dropdown on mouse hover
+    // Dropdown on mouse hover 
     // $(document).ready(function () {
     //     function toggleNavbarMethod() {
     //         if ($(window).width() > 992) {
@@ -39,7 +39,7 @@
         }
     });
     $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 15, 'easeInOutExpo');
+        $('html, body').animate({scrollTop: 0}, 30, 'easeInOutExpo');
         return false;
     });
 
@@ -96,6 +96,37 @@
     
     
 })(jQuery);
+
+document.addEventListener("DOMContentLoaded", function () {
+    let navLinks = document.querySelectorAll(".nav-link");
+    let navbarCollapse = document.querySelector(".navbar-collapse");
+
+    navLinks.forEach(function (link) {
+        link.addEventListener("click", function (event) {
+            let targetId = this.getAttribute("href").substring(1);
+            let targetSection = document.getElementById(targetId);
+
+            // Collapse the navbar (only if it's open)
+            if (navbarCollapse.classList.contains("show")) {
+                let bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse);
+                bsCollapse.hide();
+            }
+
+            // Smooth scroll to section if it exists
+            if (targetSection) {
+                event.preventDefault();
+                window.scrollTo({
+                    top: targetSection.offsetTop - 80, // Adjust based on navbar height
+                    behavior: "smooth"
+                });
+            }
+            // Remove 'active' class from all links and add to clicked one
+            navLinks.forEach((nav) => nav.classList.remove("active"));
+            link.classList.add("active");
+        });
+    });
+});
+
 
 
 function validateForm() {
