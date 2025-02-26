@@ -103,6 +103,22 @@
     height: 3rem;
 }
 
+.carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust for darkness */
+    z-index: 1; /* Ensures the overlay is below text */
+}
+
+.carousel-caption {
+    position: absolute;
+    z-index: 2; /* Higher z-index keeps text above overlay */
+}
+
 .bg-hero {
     background: url(../img/Landing\ page1.webp) top right no-repeat;
     background-size: cover;
