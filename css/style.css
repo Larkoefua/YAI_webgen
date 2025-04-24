@@ -123,7 +123,7 @@
 }
 
 .bg-hero {
-    background: url(../img/Landing\ page1.avif) top right no-repeat;
+    background: url(../img/feed_img.jpg) top right no-repeat;
     background-size: cover;
 }
 
@@ -136,12 +136,12 @@
 }
 
 .bg-vegetable {
-    background: linear-gradient(rgba(52, 173, 84, .2), rgba(52, 173, 84, .2)), url(../img/vegetable.png) bottom right no-repeat;
+    background: linear-gradient(rgba(52, 173, 84, .2), rgba(52, 173, 84, .2)), url(../img/Feeds_Chris.jpg) bottom right no-repeat;
     background-size: contain;
 }
 
 .bg-fruit {
-    background: linear-gradient(rgba(255, 153, 51, .2), rgba(255, 153, 51, .2)), url(../img/fruit.png) bottom right no-repeat;
+    background: linear-gradient(rgba(255, 153, 51, .2), rgba(255, 153, 51, .2)), url(../img/pig_feed.JPG) bottom right no-repeat;
     background-size: contain;
 }
 
